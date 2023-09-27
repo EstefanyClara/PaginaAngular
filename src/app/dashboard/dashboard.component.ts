@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { ApigameService } from '../service/apigame.service';
 import { Game } from '../game';

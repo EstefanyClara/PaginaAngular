@@ -8,13 +8,11 @@ import { Game } from '../game';
 })
 export class ApigameService {
   
-  //private urlApi ='https://api.rawg.io/api/games?key=f13a63b2d5ab4736a9ba944db1d8debb';
-  private apiKey= 'f13a63b2d5ab4736a9ba944db1d8debb';
-  private apiJuego ='https://api.rawg.io/api/games?key=';
-
+  private urlApi ='https://api.rawg.io/api/games?key=f13a63b2d5ab4736a9ba944db1d8debb';
+ 
   constructor(private http: HttpClient) {}
 
   public getData(): Observable<Game[]> {
-    return this.http.get<Game[]>(`${this.apiJuego}${this.apiKey}`);
+    return this.http.get<Game[]>(this.urlApi);
 }
 }
